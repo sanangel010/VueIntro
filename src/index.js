@@ -5,7 +5,7 @@ const person = {
     name: 'Tony',
     age: 45,
     codeName: 'IronMan',
-    power: 'Dinero'
+    power: 'Dinero 22'
 }
 
 console.log( person.name )
@@ -24,10 +24,21 @@ console.log( codeName )
 console.log( power )
 
 
-const createHero = ( person ) => {
-
-    return {
+// apartir de emascript 6 si los nombres de los parámetros y los valores son los mismos se puede obviar
+const createHero2 = ( {name, age, codeName, power} ) => 
+(   {
         id: 4656,
+        name,
+        age,
+        codeName,
+        power
+    }
+)
+
+
+const createHero = ( person ) => {
+    return {
+        id: 4656111,
         name: person.name,
         age: person.age,
         codeName: person.codeName,
@@ -35,4 +46,9 @@ const createHero = ( person ) => {
     }
 }
 
+console.log('heroe2: ');
+console.log( createHero2 ( person ) )
+console.log('heroe: ');
 console.log( createHero ( person ) )
+
+
