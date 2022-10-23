@@ -38,8 +38,13 @@ const heroes = [
     }
 ]
 
-//const existe = heroes.some( ( heroe ) => heroe.id === 1 );
-const existe = heroes.find( ( heroe ) => heroe.id === 2 );
+
+const existe = heroes.some( ( heroe ) => heroe.id === 1 );
+
+const existe2 = heroes.find( ( heroe ) => heroe.id === 2 );
 
 console.log( existe )
 console.log( existe.name )
+
+console.log( existe2 )
+console.log( existe2.name )
