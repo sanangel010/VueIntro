@@ -1,32 +1,31 @@
-// DESESTRUCTURACIÓN DE ARREGLOS (LA POSICIÓN ES  IMPORTANTE
+// Importaciones y exportaciones.
 
-const characters = ['Goku','Vegeta','Trunks']
+// Exportación clasica.
+// import { owners } from './data/heroes'
+// console.log( owners )
 
-const goku = characters[0]
-const vegeta = characters[1]
-const trunks = characters[2]
+//  // Se desectructura el objetro
+// const [dc, marvel] = owners
 
-console.log(goku, trunks)
-
-
-// desestructurando 01
-const [g,v,t] = characters
-console.log(g,v,t)
+// console.log( dc )
+// console.log( marvel )
 
 
-// desestructurando 01
-const [,,tr] = characters
-console.log(tr)
 
-// desestructurando 02
-const [go,ve,tru, goten=' Sin valor'] = characters
-console.log(tru,goten)
+// Exportación por defecto
+import superEdues from  './data/heroes'
+
+console.log(superEdues)
+
+// Busqueda por id/int
+const getHeroeById = ( id ) => 
+    superEdues.find( (Edue) => Edue.id === id ) 
+
+console.log(getHeroeById(2))
 
 
-const returnArray = () => {
-    return ['ABC',123]
-}
+// busqueda por owner/text
+const getHeroeByOwner = ( owner ) => 
+    superEdues.filter( (Edue) => Edue.owner === owner ) 
 
-// desestructurando
-const [letters,numbers] = returnArray()
-console.log(letters,numbers)
+console.log(getHeroeByOwner('DC'))

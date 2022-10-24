@@ -26,4 +26,12 @@ const heroes = [
     },
 ];
 
-const owners = ['DC','Marvel'];
+// Si se agrega la palabra reservada: export, permitirá 
+// que dicha variable se use en todo el proyecto.
+
+console.log('Heroes corre desde el heroes.js')
+export const owners = ['DC','Marvel'];
+
+
+// importación por defecto muy usada en vue
+export default heroes;
