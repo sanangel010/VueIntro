@@ -38,9 +38,10 @@ const heroes = [
     }
 ]
 
-
+// Some regresa true o false dependiendo si encuetra
 const existe = heroes.some( ( heroe ) => heroe.id === 1 );
 
+// find retorna undefined en caso de no existir coincidencia.
 const existe2 = heroes.find( ( heroe ) => heroe.id === 2 );
 
 console.log( existe )
